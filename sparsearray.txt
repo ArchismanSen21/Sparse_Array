@@ -1,0 +1,22 @@
+To optimize the program we use a HashMap to pre proscess the array before comparing it to the querie.
+
+
+if(map.containsKey(input))
+    map.put(input,map.get(input)+1);
+else
+    map.put(input,1);
+
+Here we use the hash map to check if the array elements are in the hash map or not.
+If it is there then we simply increase its frequency and if it is not present then we say put a frequency od 1.
+
+
+if(map.containsKey(input_q))
+    result[i]= map.get(input_q);
+
+Here we check the hashmap with the queries if the condition is true then we put the frequency of the found elements in result array.
+So, if in querie has an element which is not present in the array then it put 0 in the result array.
+
+Time complexity of the program:
+->O(length of array)+O(length of querie) :: here let's take n as length of array and m as length of querie.
+->O(n)+O(m)
+->O(n+m).
